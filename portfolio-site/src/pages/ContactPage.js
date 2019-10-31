@@ -4,6 +4,7 @@ import Content from '../components/Content';
 
 import { Form } from 'react-bootstrap';
 import { Button } from 'react-bootstrap';
+import axios from 'axios';
 
 class ContactPage extends React.Component {
     constructor(props) {
@@ -35,9 +36,31 @@ class ContactPage extends React.Component {
         this.setState({
             default: true,
         });
+
+        axios.post('/api/email', this.state)
+
+            .then(res => {
+                if(res.data.success) {
+                    this.setState({
+                        disabled: false,
+                        emailSent: true
+                    });
+                } else {
+                    this.setState({
+                        disabled: false,
+                        emailSent: false
+                    });
+                }
+                
+            })
+
+            .catch(err => {
+                this.setState({
+                    disabled: false,
+                    emailSent: false
+                })
+            })
     }
-
-
 
     render() {
         return(
