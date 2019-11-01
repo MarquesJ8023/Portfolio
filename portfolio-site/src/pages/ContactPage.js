@@ -1,11 +1,10 @@
-import React from 'react';
+ import React from 'react';
 import Hero from '../components/Hero';
 import Content from '../components/Content';
 
 import { Form } from 'react-bootstrap';
 import { Button } from 'react-bootstrap';
-
-
+/*
 class ContactPage extends React.Component {
     constructor(props) {
         super(props);
@@ -36,14 +35,16 @@ class ContactPage extends React.Component {
         this.setState({
             default: true,
         });
+
     }
-        
+
+
     render() {
         return(
             <div>
                 <Hero title={this.props.title}/>
                 <Content>
-                    <Form onSubmit={this.handleSubmit}>
+                    <form onSubmit={this.handleSubmit} action="https://formspree.io/xoqarzog" method="POST">
                         <Form.Group>
                             <Form.Label htmlFor="full-name">Full Name</Form.Label>
                             <Form.Control id="full-name" name="name" type="text" value={this.state.name} onChange={this.handleChange} />
@@ -65,11 +66,40 @@ class ContactPage extends React.Component {
 
                         {this.state.emailSent === true && <p className="d-inline success-msg">Email Sent</p>}
                         {this.state.emailSent === false && <p className="d-inline err-msg">Email Not Sent</p>}
-                    </Form>
+                    </form>
                 </Content>
             </div>
         );
     }
 }
 
+export default ContactPage;
+*/
+
+
+function ContactPage(props) {
+    return(
+        <div>
+         <Hero />  
+            <Content> 
+            <form action="https://formspree.io/xoqarzog"
+                method="POST">
+                    <label> 
+                        Your name:
+                            <input type="text" name="name" />
+                    </label>        
+                    <label> 
+                        Your email:
+                        <input type="text" name="_replyto" />
+                    </label>
+                    <label>
+                        Your message:
+                        <textarea name="message"></textarea>
+                    </label>
+                <Button type="submit">Send</Button>
+            </form>
+            </Content>
+        </div>
+    );    
+}
 export default ContactPage;
