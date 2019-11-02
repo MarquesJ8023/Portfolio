@@ -80,24 +80,24 @@ export default ContactPage;
 function ContactPage(props) {
     return(
         <div>
-         <Hero />  
+         <Hero title={props.title}/>  
             <Content> 
-            <Form action="https://formspree.io/xoqarzog"
-                method="POST">
-                    <label> 
-                        Your name:
-                            <input type="text" name="name" />
-                    </label>        
-                    <label> 
-                        Your email:
-                        <input type="text" name="_replyto" />
-                    </label>
-                    <label>
-                        Your message:
-                        <textarea name="message"></textarea>
-                    </label>
-                <Button type="submit">Send</Button>
-            </Form>
+                <Form action="https://formspree.io/xoqarzog"
+                    method="POST">
+                        <label> 
+                            Your name:
+                                <input type="text" name="name" />
+                        </label>        
+                        <label> 
+                            Your email:
+                            <input type="text" name="_replyto" />
+                        </label>
+                        <label>
+                            Your message:
+                            <textarea name="message"></textarea>
+                        </label>
+                    <Button type="submit">Send</Button>
+                </Form>
             </Content>
         </div>
     );    

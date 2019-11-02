@@ -17,10 +17,10 @@ code {
 }
 
 .m-card-image {
-  border-radius: 10px;
-  width: 300px;
-  height: 480px;
-  box-shadow: 0px 0px 3px 1px #ccc
+    border-radius: 10px;
+    width: auto;
+    height: 480px;
+    box-shadow: 0 0 3px 1px #ccc;
 }
 
 .m-card-info {
@@ -38,12 +38,16 @@ code {
   margin: 0px
 }
 
-.success-msg {
-  color: #57A773;
-  padding: 10px 15px;
+.m-foot-color {
+  background-color: black;
+  color: white;
 }
 
-.err-msg {
-  color: #EE6352;
-  padding: 10px 15px;
+/*
+footer {
+position:absolute;
+left:0;
+bottom:0;
+right:0;
 }
+*/
