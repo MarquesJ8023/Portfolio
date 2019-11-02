@@ -82,7 +82,7 @@ function ContactPage(props) {
         <div>
          <Hero />  
             <Content> 
-            <form action="https://formspree.io/xoqarzog"
+            <Form action="https://formspree.io/xoqarzog"
                 method="POST">
                     <label> 
                         Your name:
@@ -97,7 +97,7 @@ function ContactPage(props) {
                         <textarea name="message"></textarea>
                     </label>
                 <Button type="submit">Send</Button>
-            </form>
+            </Form>
             </Content>
         </div>
     );    
