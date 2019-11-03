@@ -5,8 +5,8 @@ import { Col } from 'react-bootstrap';
 
 function Footer() {
     return (
-        <footer className="m-foot-color">
-            <Container className="p-60 min-height: 100vh;" fluid={true}>
+        <footer className="mt-25 m-foot-color">
+            <Container fluid={true}>
                 <Row className="border-top justify-content-between p-3">
                     <Col className="p-0" md={3} sm={12}>
                         Marques Johnson

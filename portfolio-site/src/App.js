@@ -67,9 +67,8 @@ class App extends React.Component {
           <Route path="/skills" render={() => <SkillsPage title={this.state.skills.title} />} />
           <Route path="/about" render={() => <AboutPage title={this.state.about.title} />} />
           <Route path="/contact" render={() => <ContactPage title={this.state.contact.title} />} />
-          <Footer />
-
         </Container>
+      <Footer />
       </Router>
     );
   }

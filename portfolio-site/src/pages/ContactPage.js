@@ -81,14 +81,14 @@ function ContactPage(props) {
     return(
         <div>
          <Hero title={props.title}/>  
-            <Content> 
+            <Content fluid={true}> 
                 <Form action="https://formspree.io/xoqarzog"
                     method="POST">
                         <label> 
                             Your name:
                                 <input type="text" name="name" />
                         </label>        
-                        <label> 
+                        <label className="justify-space-around" > 
                             Your email:
                             <input type="text" name="_replyto" />
                         </label>
