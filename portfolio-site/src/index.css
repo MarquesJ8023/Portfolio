@@ -41,13 +41,5 @@ code {
 .m-foot-color {
   background-color: black;
   color: white;
+  margin-top: 25%;
 }
-
-/*
-footer {
-position:absolute;
-left:0;
-bottom:0;
-right:0;
-}
-*/
